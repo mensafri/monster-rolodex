@@ -1,7 +1,11 @@
-import React from "react";
 import "./card.styles.css";
+import { Monster } from "../../App";
 
-export default function Card({ monster }) {
+type CardProps = {
+  monster: Monster;
+};
+
+export default function Card({ monster }: CardProps) {
   const { id, name, email } = monster;
 
   return (

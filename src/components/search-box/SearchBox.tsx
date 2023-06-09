@@ -1,7 +1,11 @@
-import React from "react";
+import { ChangeEventHandler } from "react";
 import "./search-box.styles.css";
 
-export default function SearchBox({ onChangeHandler }) {
+interface ISearchBox {
+  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+}
+
+export default function SearchBox({ onChangeHandler }: ISearchBox) {
   return (
     <div>
       <input
